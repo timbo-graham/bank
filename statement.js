@@ -1,5 +1,3 @@
-const Bank = require(`./bank.js`);
-
 class Statement {
 
   constructor () {

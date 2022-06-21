@@ -8,6 +8,16 @@ class Statement {
 
   }
 
+  log_deposit (amount, balance) {
+    let date = this.date();
+    this.transaction_log.push(`${date} || ${amount} || || ${balance}\n`);
+  }
+
+  log_withdrawal (amount, balance) {
+    let date = this.date();
+    this.transaction_log.push(`${date} || || ${amount} || ${balance}\n`);
+  }
+
   print_statement () {
     const header = "date || credit || debit || balance\n"
     this.sort_by_newest_transaction();
@@ -18,6 +28,11 @@ class Statement {
 
   sort_by_newest_transaction () {
     this.transaction_log.reverse();
+  }
+
+  date () {
+    let today = new Date();
+    return today.toLocaleDateString(`en-UK`)
   }
 
 }

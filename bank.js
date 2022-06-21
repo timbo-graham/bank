@@ -11,23 +11,16 @@ class Bank {
 
   deposit (amount) {
     this.balance += amount;
-    let date = this.date();
-    this.statement.transaction_log.push(`${date} || ${amount} || || ${this.balance}\n`);
+    this.statement.log_deposit(amount, this.balance);
   }
 
   withdraw (amount) {
     this.balance -= amount;
-    let date = this.date();
-    this.statement.transaction_log.push(`${date} || || ${amount} || ${this.balance}\n`);
+    this.statement.log_withdrawal(amount, this.balance);
   }
 
   show_balance () {
     return `Your balance is currently £${this.balance}.`
-  }
-
-  date () {
-    let today = new Date();
-    return today.toLocaleDateString(`en-UK`)
   }
 
 }

@@ -37,6 +37,9 @@ and statement functionality. These are my two classes.
 Starting with the simplest features, i.e. showing a balance and making a deposit and withdrawal, I test drove the implementation of
 the required features. 
 
+To reduce complexity in printing the statement as instructed, the deposit and withdraw functions change the balance and log the
+transaction on the transaction_log in the correct format.
+
 ## **Instructions**
 
 - In node, require bank.js with const Bank = require(`./bank.js`) and statement.js with const Statement = require(`./statement.js`)

@@ -20,7 +20,7 @@ class Bank {
   }
 
   show_balance () {
-    return `Your balance is currently £${this.balance}.`
+    return `Your balance is currently £${(this.balance).toFixed(2)}.`
   }
 
 }

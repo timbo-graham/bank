@@ -26,6 +26,6 @@ describe(`bank class`, () => {
     const bank = new Bank();
     bank.deposit(500);
 
-    expect(bank.show_balance()).toEqual(`Your balance is currently £500.`);
+    expect(bank.show_balance()).toEqual(`Your balance is currently £500.00.`);
   })
 })

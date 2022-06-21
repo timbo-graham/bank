@@ -8,12 +8,12 @@ class Statement {
 
   log_deposit (amount, balance) {
     let date = this.date();
-    this.transaction_log.push(`${date} || ${amount} || || ${balance}\n`);
+    this.transaction_log.push(`${date} || ${(amount).toFixed(2)} || || ${(balance).toFixed(2)}\n`);
   }
 
   log_withdrawal (amount, balance) {
     let date = this.date();
-    this.transaction_log.push(`${date} || || ${amount} || ${balance}\n`);
+    this.transaction_log.push(`${date} || || ${(amount).toFixed(2)} || ${(balance).toFixed(2)}\n`);
   }
 
   print_statement () {

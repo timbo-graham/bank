@@ -42,8 +42,8 @@ transaction on the transaction_log in the correct format.
 
 ## **Instructions**
 
-- In node, require bank.js with const Bank = require(`./bank.js`) and statement.js with const Statement = require(`./statement.js`)
-- Create new instances of each to work with
+- In node, require bank.js with const Bank = require(`./bank.js`)
+- Create a new instance of Bank to work with.
 - You can make deposits or withdrawls with the deposit() and withdraw methods, passing the value as an argument. 
 - bank.print_statement() will return a list of all transactions in reverse chronological order, formatted under a header. 
 - You can also use the show_balance() method to simply return the current balance of the account. 
